@@ -14,17 +14,20 @@ export default class Form extends ReactorComponent {
         this.isValidForm = true; // make sure its is reset
 
         // validate all inputs
-        events.trigger('form.validation', this);
+       // events.trigger('form.validation', this);
 
         // check if the form is valid
         // if not, then do not submit
-        if (this.isValidForm === false) return;
+       // if (this.isValidForm === false) return;
 
         if (this.props.onSubmit) {
             let formElement = e.target;
             this.props.onSubmit(e, formElement);
+            console.log(this.props.onSubmit);
+
         }
     }
+
 
     /**
      * {@inheritdoc}

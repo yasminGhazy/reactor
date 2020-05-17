@@ -10,7 +10,7 @@ import {
 import { createBrowserHistory } from 'history';
 import Middleware from './middleware';
 
-const history = createBrowserHistory();
+const history = createBrowserHistory(); // /login | /users...etc
 
 const routesList = [];
 
@@ -35,7 +35,6 @@ function addRouter(path, component, middleware = null) {
  * @returns {Array}
  */
 function Routes() {
-
     // each route contains:
     // path: path to page
     // middleware: middleware to be applied before accessing the component page 
