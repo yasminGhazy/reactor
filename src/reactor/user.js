@@ -26,6 +26,23 @@ class User {
         this.userData = userData;
         cache.set('user', userData);
     }
+
+    /**
+     * Log the user out
+     */
+    logout() {
+        this.userData = null;
+        cache.remove('user');
+    }
+
+    /**
+     * Get user access token
+     * 
+     * @returns {string}
+     */
+    getAccessToken() {
+        return this.userData.accessToken;
+    }
 }
 
 export default new User();
